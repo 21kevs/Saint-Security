@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Saint Security</title>
+  <link href="dashboard.css" rel="stylesheet" type="text/css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #800000;
+      color: #808080;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 10px 20px;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #800000;
+      color: #808080;
+      text-align: center;
+      padding: 2px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Saint Security</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('admissions')">Admissions</a></li>
+      <li><a href="#" onclick="showSection('students')">Students</a></li>
+      <li><a href="#" onclick="showSection('teachers')">Teachers</a></li>
+      <li><a href="#" onclick="showSection('subjects')">Subjects</a></li>
+      <li><a href="#" onclick="showSection('grades')">Grades</a></li>
+      </ul>
+  </nav>
+
+  <main>
+    <!-- Sections with images -->
+    <section id="home">
+       <center>
+         <h2>HOME</h2>
+       <center>
+      <p>Welcome to our website! This is the home page.</p>
+      <img src="https://media.licdn.com/dms/image/D4E22AQFCXacU7fnb9A/feedshare-shrink_800/0/1710769433531?e=1713398400&v=beta&t=kvrtHfH3b6H0gMuMqgQEw6or0xipc33oNW5LLRs7CMY"
+        alt="Description of the image">
+    </section>
+
+    <section id="admissions">
+      <center>
+        <h2>STUDENT INFORMATION</h2>
+      </center>
+      <form id="student-form">
+        <label for="student-name">Name:</label><br>
+        <input type="text" id="student-name" name="student-name" required><br>
+        <label for="student-email">Email:</label><br>
+        <input type="email" id="student-email" name="student-email" required><br>
+        <label for="student-phone">Phone:</label><br>
+        <input type="tel" id="student-phone" name="student-phone" required><br>
+        <label for="student-program">Program:</label><br>
+        <select id="student-program" name="student-program" required>
+          <option value="">Select Program</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Engineering">Engineering</option>
+          <option value="Business">Business</option>
+        </select><br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+
+    <section id="students">
+       <h2>STUDENT LIST</h2>
+        <ul>
+          <div class="search-container">
+              <input type="text" class="search-input" placeholder="Search...">
+              <button class="search-button">Search</button>
+          </div>
+          <p style="margin-right: 50px;"</p>
+          
+          <li>
+            <strong>Name:</strong> Jhonmark Gabayno<br>
+            <strong>Email:</strong> jhonmark.com<br>
+            <strong>Phone:</strong> 123-456-7890<br>
+            <strong>Program:</strong> Computer Science
+          </li>
+          <button>Edit</button>
+          <button>Delete</button>
+          <p style="margin-right: 20px;"</p>
+          <li>
+            <strong>Name:</strong> Leonin Novio<br>
+            <strong>Email:</strong> unin.com<br>
+            <strong>Phone:</strong> 987-654-3210<br>
+            <strong>Program:</strong> Computer Science
+          </li>
+          <button>Edit</button>
+          <button>Delete</button>
+           <p style="margin-right: 20px;"</p>
+          <li>
+            <strong>Name:</strong> Kevin De Quiros<br>
+            <strong>Email:</strong> kevs.com<br>
+            <strong>Phone:</strong> 987-654-3210<br>
+            <strong>Program:</strong> Computer Science
+          </li>
+          <button>Edit</button>
+          <button>Delete</button>
+          <p style="margin-right: 20px;"</p>
+          <li>
+            <strong>Name:</strong> Angelica Meng Bandojo<br>
+            <strong>Email:</strong> angel.com<br>
+            <strong>Phone:</strong> 987-654-3210<br>
+            <strong>Program:</strong> Computer Science
+          </li>
+          <button>Edit</button>
+          <button>Delete</button>
+          <p style="margin-right: 20px;"</p>
+          <li>
+            <strong>Name:</strong> Ling Wi Jassen Dalde<br>
+            <strong>Email:</strong> laway.com<br>
+            <strong>Phone:</strong> 987-654-3210<br>
+            <strong>Program:</strong> Computer Science
+         </li>
+          <button>Edit</button>
+          <button>Delete</button>
+          <p style="margin-right: 20px;"</p>
+        </ul>
+    </section>
+
+    <section id="teachers">
+       <center>
+         <h2>TEACHERS</h2>
+        <center>
+           <div class="search-container">
+               <input type="text" class="search-input" placeholder="Search....">
+               <button class="search-button">Search</button>
+           </div>
+            <p style="margin-right: 20px;"</p>
+           <style>
+               body {
+                   font-family: Arial, sans-serif;
+                   margin: 0;
+                   padding: 20px;
+               }
+               table {
+                   width: 100%;
+                   border-collapse: collapse;
+               }
+               th, td {
+                   border: 1px solid #dddddd;
+                   padding: 8px;
+                   text-align: left;
+               }
+               th {
+                   background-color: #f2f2f2;
+               }
+           </style>
+           </head>
+           <body>
+           <table>
+             <thead>
+               <tr>
+                 <th>Students Overview</th>
+                 <th>Subjects Overview</th>
+               
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                 <td> N/A</td>
+                 <td> N/A</td>
+                 
+               </tr>
+               <tr>
+                  <td> N/A</td>
+                  <td> N/A</td>
+                 
+               </tr>
+               <tr>
+                 <td> N/A</td>
+                  <td> N/A</td>
+                  
+               </tr>
+               <tr>
+                 <td> N/A</td>
+                  <td> N/A</td>
+               </tr>
+               <tr>
+                 <td> N/A</td>
+                  <td> N/A</td>
+               </tr>
+             </tbody>
+           </table>
+       </section>
+    <section id="subjects">
+      <div class="search-container">
+          <input type="text" class="search-input" placeholder="Search...">
+          <button class="search-button">Search</button>
+      </div>
+      <p style="margin-right: 20px;"</p>
+      
+      <h2>Manage Subjects</h2>
+        <div class="subject">
+          <h3>SUBJECT 1</h3>
+          <p>Code Description: Subjects Description, Assign Teachers.</p>
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+        <div class="subject">
+          <h3>SUBJECT 2</h3>
+          <p>Code Description: Subjects Description, Assign Teachers.</p>
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+        <div class="subject">
+          <h3>SUBJECT 3</h3>
+          <p>Code Description: Subjects Description, Assign Teachers.</p>
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+      <div class="subject">
+        <h3>SUBJECT 4</h3>
+        <p>Code Description: Subjects Description, Assign Teachers.</p>
+        <button>Edit</button>
+        <button>Delete</button>
+      </div>
+      <div class="subject">
+        <h3>SUBJECT 5</h3>
+        <p>Code Description: Subjects Description, Assign Teachers.</p>
+        <button>Edit</button>
+        <button>Delete</button>
+      </div>
+      </section>
+
+    <section id="grades">
+       <center>    
+        <h2>Release Grades</h2>
+         <div class="search-container">
+             <input type="text" class="search-input" placeholder="Students No....">
+             <button class="search-button">Search</button>
+         </div>
+          <p style="margin-right: 20px;"</p>
+         <title>Student Name</title>
+         <style>
+             body {
+                 font-family: Arial, sans-serif;
+                 margin: 0;
+                 padding: 20px;
+             }
+             table {
+                 width: 100%;
+                 border-collapse: collapse;
+             }
+             th, td {
+                 border: 1px solid #dddddd;
+                 padding: 8px;
+                 text-align: left;
+             }
+             th {
+                 background-color: #f2f2f2;
+             }
+         </style>
+         </head>
+         <body>
+
+             <strong>Student Name:</strong> N/A <br>
+             <strong>Year and Section:</strong> N/A <br>
+             <p style="margin-right: 20px;"</p>
+          
+
+         <table>
+           <thead>
+             <tr>
+               <th>Subject Code</th>
+               <th>Final Grade</th>
+               <th>Remarks</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td> N/A</td>
+               <td> N/A</td>
+               <td> N/A</td>
+             </tr>
+             <tr>
+                <td> N/A</td>
+                <td> N/A</td>
+                <td> N/A</td>
+             </tr>
+             <tr>
+               <td> N/A</td>
+                <td> N/A</td>
+                <td> N/A</td>
+             </tr>
+             <tr>
+               <td> N/A</td>
+                <td> N/A</td>
+                <td> N/A</td>
+             </tr>
+             <tr>
+               <td> N/A</td>
+                <td> N/A</td>
+                <td> N/A</td>
+             </tr>
+           </tbody>
+         </table>
+
+         </body>
+      <center>
+      </section>
+  
+  <script src="script.js"></script>
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('main section').forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // Show the selected section
+      document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function toggleLayout() {
+      document.body.classList.toggle('grid-layout');
+    }
+  </script>
+</body>
+
+</html>

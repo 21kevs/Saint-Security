@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">    
+    <title>Saint Security</title>                                                    
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+          <div class="nav-logo">     
+            <p>Saint Security .</p>            
+          </div>
+          <div class="nav-menu" id="navMenu">
+           
+          </div>
+          <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+          </div>
+          <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+          </div>
+          <!-- Your navigation code -->
+        </nav>
+
+        <!-- Form Box -->
+        <div class="form-box">
+          <div class="login-container" id="login">
+              <div class="top">
+                  <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                  <header>Login</header>
+              </div>
+              <div class="input-box">
+                  <input type="text" class="input-field" id="loginUsername" placeholder="User or Email">
+                  <i class="bx bx-user"></i>
+              </div>
+              <div class="input-box">
+                  <input type="password" class="input-field" id="loginPassword" placeholder="Password">
+                  <i class="bx bx-lock-alt"></i>
+              </div>
+              <div class="input-box">
+                  <input type="submit" class="submit" value="Sign In" onclick="validateLogin()">
+              </div>
+              <div class="two-col">
+                  <div class="one">
+                      <input type="checkbox" id="login-check">
+                      <label for="login-check"> Remember Me</label>
+                  </div>
+                  <div class="two">
+                      <label><a href="#">Forgot password?</a></label>
+                  </div>
+              </div>
+          </div>
+          <div class="register-container" id="register">
+                      <div class="top">
+                          <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                          <header>Sign Up</header>
+                      </div>
+                      <div class="two-forms">
+                          <div class="input-box">
+                              <input type="text" class="input-field" id="registerFirstname" placeholder="Firstname">
+                              <i class="bx bx-user"></i>
+                          </div>
+                          <div class="input-box">
+                              <input type="text" class="input-field" id="registerLastname" placeholder="Lastname">
+                              <i class="bx bx-user"></i>
+                          </div>
+                      </div>
+                      <div class="input-box">
+                          <input type="text" class="input-field" id="registerEmail" placeholder="Email">
+                          <i class="bx bx-envelope"></i>
+                      </div>
+                      <div class="input-box">
+                          <input type="password" class="input-field" id="registerPassword" placeholder="Password">
+                          <i class="bx bx-lock-alt"></i>
+                      </div>
+                      <div class="input-box">
+                          <input type="submit" class="submit" value="Register" onclick="validateRegister()">
+                      </div>
+                      <div class="two-col">
+                          <div class="one">
+                              <input type="checkbox" id="register-check">
+                              <label for="register-check"> Remember Me</label>
+                          </div>
+                          <div class="two">
+                              <label><a href="#">Terms & conditions</a></label>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  <!-- Login and Register Forms -->
+        
+
+    <script>
+        // Your existing functions
+      function myMenuFunction() {
+          var i = document.getElementById("navMenu");
+
+          if (i.className === "nav-menu") {
+              i.className += " responsive";
+          } else {
+              i.className = "nav-menu";
+          }
+      }
+
+      function login() {
+          var x = document.getElementById("login");
+          var y = document.getElementById("register");
+          var a = document.getElementById("loginBtn");
+          var b = document.getElementById("registerBtn");
+
+          x.style.left = "4px";
+          y.style.right = "-520px";
+          a.classList.add("white-btn");
+          b.classList.remove("white-btn");
+          x.style.opacity = 1;
+          y.style.opacity = 0;
+      }
+
+      function register() {
+          var x = document.getElementById("login");
+          var y = document.getElementById("register");
+          var a = document.getElementById("loginBtn");
+          var b = document.getElementById("registerBtn");
+
+          x.style.left = "-510px";
+          y.style.right = "5px";
+          a.classList.remove("white-btn");
+          b.classList.add("white-btn");
+          x.style.opacity = 0;
+          y.style.opacity = 1;
+      }
+        function redirectToDashboard() {
+            // Redirect user to the main dashboard page
+            window.location.href = "dashboard.html"; // Change "dashboard.html" to your actual dashboard page
+        }
+
+        function validateLogin() {
+            var username = document.getElementById("loginUsername").value;
+            var password = document.getElementById("loginPassword").value;
+
+            // Perform validation here, for example:
+            if (username === "" || password === "") {
+                alert("Please fill in all fields");
+                return false;
+            }
+
+            // Assuming validation passes, redirect to dashboard
+            redirectToDashboard();
+            return true;
+        }
+
+        function validateRegister() {
+            var firstname = document.getElementById("registerFirstname").value;
+            var lastname = document.getElementById("registerLastname").value;
+            var email = document.getElementById("registerEmail").value;
+            var password = document.getElementById("registerPassword").value;
+
+            // Perform validation here, for example:
+            if (firstname === "" || lastname === "" || email === "" || password === "") {
+                alert("Please fill in all fields");
+                return false;
+            }
+
+            // Assuming validation passes, redirect to dashboard
+            redirectToDashboard();
+            return true;
+        }
+    </script>
+</body>
+</html>
